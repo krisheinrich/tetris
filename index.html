@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris</title>
+  <style>
+    body {
+      background: #333355;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      font-size: 16px;
+    }
+    canvas {
+      border: 1px solid white;
+    }
+    .scores {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div if="mode-select">
+    <button id="mode-easy">Easy</button>
+    <button id="mode-normal">Normal</button>
+    <button id="mode-hard">Hard</button>
+  </div>
+  <div id="mode">
+  </div>
+  <div class="scores">
+    <div id="high-score"></div>
+    <div id="score"></div>
+  </div>
+  <canvas id="canvas" width="800" height="800"></canvas>
+
+  <audio controls loop id="theme" style="display:none;">
+    <source src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Tetris_theme.ogg" type="audio/ogg">
+  </audio>
+  <script src="tetris.js"></script>
+</body>
+</html>
